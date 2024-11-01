@@ -1,6 +1,5 @@
-// eslint-disable-next-line
-// @ts-expect-error Penner seems to have no typings.
-import Penner from 'penner';
+import Penner from 'tween-functions';
+
 
 /**
  * Returns correct Penner equation using string or Function.
@@ -10,10 +9,9 @@ import Penner from 'penner';
  * @param {(function|string)} [ease]
  * @param {defaults} default penner equation to use if none is provided
  */
-// eslint-disable-next-line consistent-return
-export default function ease(ease: any, defaults?: any): any
+export default function ease(ease: Penner.TweenFunctionBack | keyof typeof Penner, defaults?: keyof typeof Penner)
 {
-    if (!ease)
+    if (!ease && defaults)
     {
         return Penner[defaults];
     }

@@ -11,7 +11,8 @@
     "esModuleInterop": true,
     "moduleResolution": "node",
     "strict": true,
-    "allowSyntheticDefaultImports": true
+    "allowSyntheticDefaultImports": true,
+    "lib": ["es6", "dom", "ESNext"],
   },
   "include": [
     "src/**/*"

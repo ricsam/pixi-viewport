@@ -2,10 +2,10 @@
     "name": "pixi-viewport",
     "version": "5.0.3",
     "description": "A highly configurable viewport/2D camera designed to work with pixi.js. Features include dragging, pinch-to-zoom, mouse wheel zooming, decelerated dragging, follow target, snap to point, snap to zoom, clamping, bouncing on edges, and move on mouse edges.",
-    "main": "./dist/pixi_viewport.umd.cjs",
-    "module": "./dist/pixi_viewport.js",
+    "main": "./src/index.ts",
+    "module": "./src/index.ts",
     "type": "module",
-    "types": "./dist/index.d.ts",
+    "types": "./src/index.ts",
     "directories": {
         "doc": "docs"
     },
@@ -48,7 +48,11 @@
         "url": "https://github.com/davidfig/pixi-viewport/issues"
     },
     "homepage": "https://github.com/davidfig/pixi-viewport#readme",
+    "dependencies": {
+        "tween-functions": "1.2.0"
+    },
     "devDependencies": {
+        "@types/tween-functions": "1.2.2",
         "@typescript-eslint/parser": "^5.5.0",
         "chai": "^4.3.4",
         "clicked": "^4.0.3",
