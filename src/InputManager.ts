@@ -216,6 +216,12 @@ export class InputManager {
       this.viewport.top <= point.y &&
       point.y <= this.viewport.bottom
     ) {
+      if (this.viewport.options.stopWheel) {
+        if (this.viewport.options.stopWheel(event)) {
+          return;
+        }
+      }
+
       const stop = this.viewport.plugins.wheel(event);
 
       if (stop && !this.viewport.options.passiveWheel) {

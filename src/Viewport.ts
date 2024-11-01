@@ -107,6 +107,13 @@ export interface IViewportOptions {
    * @default PIXI.Ticker.shared
    */
   ticker?: Ticker;
+
+  /**
+   * Determine whether to stop the wheel event
+   * @param ev WheelEvent
+   * @returns boolean
+   */
+  stopWheel?: (ev: WheelEvent) => boolean;
 }
 
 export interface ICompleteViewportOptions extends IViewportOptions {
@@ -117,6 +124,7 @@ export interface ICompleteViewportOptions extends IViewportOptions {
   stopPropagation: boolean;
   noTicker: boolean;
   ticker: Ticker;
+  stopWheel: (ev: WheelEvent) => boolean;
 }
 
 export interface IViewportTransformState {
